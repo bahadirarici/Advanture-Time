@@ -1,0 +1,116 @@
+import random, sys
+
+print("Macera adasına hoşgeldin")
+print("Gerçek bir maceraya hazır mısın?")
+print("Görevin hazineyi bulmak.")
+
+ann=input("Yola çıktın. Yürüyorsun. Elindeki haritaya göre hazine karşıdaki adada. Adaya geçmek için bir teknenin gelmesini mi bekleyeceksin yoksa yürüyecek misin. Beklemek tehlikeli, aslan saldırısına uğrayabilirsin. Ancak yüzmek de tehlikeli çünkü köpekbalıkları var. Beklemek için (b) yüzmek için (y) gir: ")
+while True:
+    if ann=='b':
+        rando=random.randint(1,4)
+        if rando==1:
+            print("Eyvah, beklerken aslanlar saldırdı. Öldün. Tekrar dene.")
+            sys.exit()
+        else:
+            print("Beklediğine değdi. Güvenle adaya gidiyorsun.")
+            break
+    elif ann=='y':
+        rando=random.randint(1,4)
+        if rando==1:
+            print("Tüh, belki de yüzmek iyi bir fikir değildi. Köpekbalıkları saldırdı. Öldün. Tekrar dene.")
+            sys.exit()
+        else:
+            print("İyi bir yüzücüymüşsün. Adaya ulaştın.")
+            break
+    else:
+        ann=input("Beklemek için (b) yüzmek için (y) giriniz. ")
+        continue
+ann1=input("Adadasın. Önündeki patika iki farklı yöne gitmekte. Sola gitmek için (1) sağa gitmek için (2) gir. ")
+while True:
+    if ann1=='1':
+        girdi=input("Bir uçuruma vardın. Yanlış yolmuş. Geri dönmek için (g) gir. ")
+        if girdi=='g':
+            print("Doğru yoldasın. İlerlemeye devam ediyorsun.")
+            break
+        else:
+            girdi=input("Geri dönmek için (g) girmen gerek.")
+            if girdi=='g':
+                print("Doğru yoldasın. İlerlemeye devam ediyorsun.")
+                break
+            else:
+                print("Uçurumdan yuvarlandın. Elveda")
+                sys.exit()
+    elif ann1=='2':
+        print("Doğru yoldasın. İlerlemeye devam ediyorsun.")
+        break
+    else:
+        ann1=input("Sola gitmek için (1) sağa gitmek için (2) gir. ")
+        continue
+print(".")
+print(".")
+print(".")
+ann2=input("Karşına senden haraç almak isteyen bir korsan çıktı. Sağ salim geçmek için 10 altın vermeni istiyor. Haracı vermek için (v) dövüşmek için (d) gir. ")
+while True:
+    if ann2=='v':
+        dov=input("Sadece 5 altının varmış. Korsan sana saldırıyor. Kendini savunmak için (s) gir.")
+        if dov=='s':
+            rando=random.randint(1,4)
+            if rando==1:
+                print("Korsan dişli çıktı. Öldün. Öbür dünyada görüşmek üzere.")
+                sys.exit()
+            else:
+                print("Ne bilek varmış sende. Korsanı hakladın. Maceraya devam ediyorsun.")
+                break
+        else:
+            dov=input("Korktun galiba. Kendini savunmak için (s) gir.")
+            if dov=='s':
+                rando=random.randint(1,4)
+                if rando==1:
+                    print("Korsan dişli çıktı. Öldün. Öbür dünyada görüşmek üzere.")
+                    sys.exit()
+                else:
+                    print("Ne bilek varmış sende. Korsanı hakladın. Maceraya devam ediyorsun.")
+                    break
+            else:
+                print("Bunun adı korkaklık ve korsanlar korkakları asla affetmez. Öldün. Üzgünüm")
+                sys.exit()
+    elif ann2=='d':
+        rando=random.randint(1,4)
+        if rando==1:
+            print("Korsan dişli çıktı. Öldün. Öbür dünyada görüşmek üzere.")
+            sys.exit()
+        else:
+            print("Ne bilek varmış sende. Korsanı hakladın. Maceraya devam ediyorsun.")
+            break
+    else:
+        ann2=input("Haracı vermek için (v) dövüşmek için (d) gir. ")
+        continue
+ann3=input("Hazinenin bulunduğu şatoya geldin. Karşında biri kırmızı biri mavi biri de sarı üç kapı var. Kırmızı kapıdan geçmek için (k) mavi kapıdan geçmek için (m) sarı kapıdan geçmek için (s) gir. ")
+while True:
+    if ann3=='k':
+        rando=random.randint(1,3)
+        if rando==1:
+            print("Kırmızı kapıdan geçtin ancak bu bir tuzakmış. Alevlerin içine düştün. Elveda")
+            sys.exit()
+        else:
+            print("Tebrikler! Hazineye ulaştın. Gerçek bir kahramansın.")
+            sys.exit()
+    elif ann3=='m':
+        rando=random.randint(1,3)
+        if rando==1:        
+            print("Mavi kapıdan geçtin ancak bu bir tuzakmış. Alevlerin içine düştün. Elveda")
+            sys.exit()
+        else:
+            print("Tebrikler! Hazineye ulaştın. Gerçek bir kahramansın.")
+            sys.exit()
+    elif ann3=='s':
+        rando=random.randint(1,3)
+        if rando==1:        
+            print("Mavi kapıdan geçtin ancak bu bir tuzakmış. Alevlerin içine düştün. Elveda")
+            sys.exit()
+        else:
+            print("Tebrikler! Hazineye ulaştın. Gerçek bir kahramansın.")
+            sys.exit()
+    else:
+        print("Berbat bir maceracısın. Hiç bir kapıdan geçemedin ve evine elin boş dönüyorsun. Elveda")
+        sys.exit()
